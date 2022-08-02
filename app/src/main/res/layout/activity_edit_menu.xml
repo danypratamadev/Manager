@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Gray100"
+    tools:context=".EditMenuActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/theToolBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/White">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_175sdp">
+
+                    <ImageView
+                        android:id="@+id/imgMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_150sdp"
+                        android:src="@drawable/logo_color"
+                        android:scaleType="centerCrop"/>
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/chooseImg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_photo_camera_black_24dp"
+                        android:tint="@color/White"
+                        app:backgroundTint="@color/OrangeA400"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        app:elevation="@dimen/_2sdp"/>
+
+                </RelativeLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tiNamaMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    app:hintEnabled="true"
+                    android:hint="Nama Menu"
+                    app:helperTextEnabled="true"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edNamaMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_38sdp"
+                        android:textSize="@dimen/_13ssp"
+                        android:textColor="@color/Gray800"
+                        android:inputType="text"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tiKtgMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    app:hintEnabled="true"
+                    android:hint="Kategori Menu"
+                    app:helperTextEnabled="true"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_20sdp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edKtgMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_38sdp"
+                        android:textSize="@dimen/_13ssp"
+                        android:textColor="@color/Gray800"
+                        android:inputType="text"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/White"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Status Menu"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="@color/Gray800"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="@dimen/_11sdp"
+                    android:layout_marginEnd="@dimen/_11sdp"
+                    android:layout_marginBottom="@dimen/_10sdp">
+
+                    <Button
+                        android:id="@+id/stsYes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_weight="1"
+                        android:text="Tersedia"
+                        android:textSize="@dimen/_13ssp"
+                        android:textAllCaps="false"
+                        android:textColor="@color/Gray700"
+                        android:background="@drawable/back_button_gray_stroke"
+                        android:stateListAnimator="@null"
+                        android:layout_margin="@dimen/_5sdp"/>
+
+                    <Button
+                        android:id="@+id/stsNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_weight="1"
+                        android:text="Habis"
+                        android:textSize="@dimen/_13ssp"
+                        android:textAllCaps="false"
+                        android:textColor="@color/Gray700"
+                        android:background="@drawable/back_button_gray_stroke"
+                        android:stateListAnimator="@null"
+                        android:layout_margin="@dimen/_5sdp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/White"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Pengaturan Menu Offline"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="@color/Gray800"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tiHargaMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    app:hintEnabled="true"
+                    android:hint="Harga Menu Offline"
+                    app:helperTextEnabled="true"
+                    android:layout_margin="@dimen/_15sdp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edHargaMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_38sdp"
+                        android:textSize="@dimen/_13ssp"
+                        android:textColor="@color/Gray800"
+                        android:inputType="number"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/Gray200"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"/>
+
+                <LinearLayout
+                    android:id="@+id/cardPromoSyarat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_15sdp"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackgroundBorderless">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Promo Crazy Price"
+                        android:textSize="@dimen/_13ssp"
+                        android:textColor="@color/Gray800"
+                        android:layout_gravity="center_vertical"/>
+
+                    <Switch
+                        android:id="@+id/switchPromoSyarat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/Gray200"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"/>
+
+                <LinearLayout
+                    android:id="@+id/cardDiskon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_15sdp"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackgroundBorderless">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Diskon Menu"
+                        android:textSize="@dimen/_13ssp"
+                        android:textColor="@color/Gray800"
+                        android:layout_gravity="center_vertical"/>
+
+                    <Switch
+                        android:id="@+id/switchDiskon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"/>
+
+                </LinearLayout>
+
+                <net.cachapa.expandablelayout.ExpandableLayout
+                    android:id="@+id/formDiskon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:el_duration="500"
+                    app:el_expanded="false"
+                    app:el_parallax="0">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/Gray50"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tiBesarDiskon"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            app:hintEnabled="true"
+                            android:hint="Besaran Diskon"
+                            app:helperTextEnabled="true"
+                            app:helperText="Example: 20%"
+                            android:layout_margin="@dimen/_15sdp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/besarDiskon"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_38sdp"
+                                android:textSize="@dimen/_13ssp"
+                                android:textColor="@color/Gray800"
+                                android:inputType="number"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                </net.cachapa.expandablelayout.ExpandableLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/Gray200"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"/>
+
+                <LinearLayout
+                    android:id="@+id/cardTambahDiskon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_15sdp"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackgroundBorderless">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Tambahan Diskon"
+                        android:textSize="@dimen/_13ssp"
+                        android:textColor="@color/Gray800"
+                        android:layout_gravity="center_vertical"/>
+
+                    <Switch
+                        android:id="@+id/switchTambahDiskon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"/>
+
+                </LinearLayout>
+
+                <net.cachapa.expandablelayout.ExpandableLayout
+                    android:id="@+id/formTambahDiskon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:el_duration="500"
+                    app:el_expanded="false"
+                    app:el_parallax="0">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/Gray50"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tiBesarTambahDiskon"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            app:hintEnabled="true"
+                            android:hint="Besaran Tambahan Diskon"
+                            app:helperTextEnabled="true"
+                            app:helperText="Example: 10%"
+                            android:layout_margin="@dimen/_15sdp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/besarTambahDiskon"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_38sdp"
+                                android:textSize="@dimen/_13ssp"
+                                android:text="10"
+                                android:textColor="@color/Gray800"
+                                android:inputType="number"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Tambahan Diskon berlaku pada saat pembelian menu ini memenuhi syarat minimal pembelian sebanyak:"
+                            android:textSize="@dimen/_12ssp"
+                            android:textColor="@color/Gray700"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:layout_marginEnd="@dimen/_15sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"/>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tiMinimalBeli"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            app:hintEnabled="true"
+                            android:hint="Minimal Pembelian"
+                            app:helperTextEnabled="true"
+                            app:helperText="Example: 2 (Satuan Porsi)"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_20sdp"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:layout_marginEnd="@dimen/_15sdp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/besarMinimalBeli"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_38sdp"
+                                android:textSize="@dimen/_13ssp"
+                                android:text="2"
+                                android:textColor="@color/Gray800"
+                                android:inputType="number"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                </net.cachapa.expandablelayout.ExpandableLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/White"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Pengaturan Menu Online"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="@color/Gray800"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tiHargaMenuOn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    app:hintEnabled="true"
+                    android:hint="Harga Menu Online"
+                    app:helperTextEnabled="true"
+                    android:layout_margin="@dimen/_15sdp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edHargaMenuOn"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_38sdp"
+                        android:textSize="@dimen/_13ssp"
+                        android:textColor="@color/Gray800"
+                        android:inputType="number"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/Gray200"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"/>
+
+                <LinearLayout
+                    android:id="@+id/cardPromoSyaratOn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_15sdp"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackgroundBorderless">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Promo Crazy Price"
+                        android:textSize="@dimen/_13ssp"
+                        android:textColor="@color/Gray800"
+                        android:layout_gravity="center_vertical"/>
+
+                    <Switch
+                        android:id="@+id/switchPromoSyaratOn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/Gray200"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"/>
+
+                <LinearLayout
+                    android:id="@+id/cardDiskonOn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_15sdp"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackgroundBorderless">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Diskon Menu"
+                        android:textSize="@dimen/_13ssp"
+                        android:textColor="@color/Gray800"
+                        android:layout_gravity="center_vertical"/>
+
+                    <Switch
+                        android:id="@+id/switchDiskonOn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"/>
+
+                </LinearLayout>
+
+                <net.cachapa.expandablelayout.ExpandableLayout
+                    android:id="@+id/formDiskonOn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:el_duration="500"
+                    app:el_expanded="false"
+                    app:el_parallax="0">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/Gray50"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tiBesarDiskonOn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            app:hintEnabled="true"
+                            android:hint="Besaran Diskon"
+                            app:helperTextEnabled="true"
+                            app:helperText="Example: 20%"
+                            android:layout_margin="@dimen/_15sdp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/besarDiskonOn"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_38sdp"
+                                android:textSize="@dimen/_13ssp"
+                                android:textColor="@color/Gray800"
+                                android:inputType="number"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                </net.cachapa.expandablelayout.ExpandableLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/Gray200"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"/>
+
+                <LinearLayout
+                    android:id="@+id/cardTambahDiskonOn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_15sdp"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackgroundBorderless">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Tambahan Diskon"
+                        android:textSize="@dimen/_13ssp"
+                        android:textColor="@color/Gray800"
+                        android:layout_gravity="center_vertical"/>
+
+                    <Switch
+                        android:id="@+id/switchTambahDiskonOn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"/>
+
+                </LinearLayout>
+
+                <net.cachapa.expandablelayout.ExpandableLayout
+                    android:id="@+id/formTambahDiskonOn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:el_duration="500"
+                    app:el_expanded="false"
+                    app:el_parallax="0">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/Gray50"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tiBesarTambahDiskonOn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            app:hintEnabled="true"
+                            android:hint="Besaran Tambahan Diskon"
+                            app:helperTextEnabled="true"
+                            app:helperText="Example: 10%"
+                            android:layout_margin="@dimen/_15sdp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/besarTambahDiskonOn"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_38sdp"
+                                android:textSize="@dimen/_13ssp"
+                                android:text="10"
+                                android:textColor="@color/Gray800"
+                                android:inputType="number"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Tambahan Diskon berlaku pada saat pembelian menu ini memenuhi syarat minimal pembelian sebanyak:"
+                            android:textSize="@dimen/_12ssp"
+                            android:textColor="@color/Gray700"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:layout_marginEnd="@dimen/_15sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"/>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tiMinimalBeliOn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            app:hintEnabled="true"
+                            android:hint="Minimal Pembelian"
+                            app:helperTextEnabled="true"
+                            app:helperText="Example: 2 (Satuan Porsi)"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_20sdp"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:layout_marginEnd="@dimen/_15sdp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/besarMinimalBeliOn"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_38sdp"
+                                android:textSize="@dimen/_13ssp"
+                                android:text="2"
+                                android:textColor="@color/Gray800"
+                                android:inputType="number"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                </net.cachapa.expandablelayout.ExpandableLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_120sdp"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="bottom"
+        android:background="@color/White"
+        android:elevation="@dimen/_5sdp">
+
+        <Button
+            android:id="@+id/simpanMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Simpan"
+            android:textSize="@dimen/_13ssp"
+            android:textAllCaps="false"
+            android:textColor="@color/White"
+            android:background="@drawable/back_button"
+            android:stateListAnimator="@null"
+            android:layout_margin="@dimen/_10sdp"/>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

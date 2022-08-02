@@ -1,0 +1,159 @@
+{
+  "project_info": {
+    "project_number": "1081904866613",
+    "firebase_url": "https://kuah-panas.firebaseio.com",
+    "project_id": "kuah-panas",
+    "storage_bucket": "kuah-panas.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1081904866613:android:473962ee38d5011b72d87c",
+        "android_client_info": {
+          "package_name": "com.pratama.dany.adminkuahpanas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1081904866613-lkd8doo3mrtf4pf5njq5m8iofs70mf6f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pratama.dany.adminkuahpanas",
+            "certificate_hash": "da7517a42ecdf4971a24647ec95f199bf2fa4be1"
+          }
+        },
+        {
+          "client_id": "1081904866613-b2jcd42dffqq4g5hc0950fa1tp0mtj4v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmrXqqBZ2hflQSEiEfDOfzXfKzUywiljs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1081904866613-b2jcd42dffqq4g5hc0950fa1tp0mtj4v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1081904866613:android:737c2aa4cefdc52572d87c",
+        "android_client_info": {
+          "package_name": "com.pratama.dany.kasir"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1081904866613-bjch0rk7ftn2e7l4k1t8fsq2a3c6lb2k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pratama.dany.kasir",
+            "certificate_hash": "da7517a42ecdf4971a24647ec95f199bf2fa4be1"
+          }
+        },
+        {
+          "client_id": "1081904866613-b2jcd42dffqq4g5hc0950fa1tp0mtj4v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmrXqqBZ2hflQSEiEfDOfzXfKzUywiljs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1081904866613-b2jcd42dffqq4g5hc0950fa1tp0mtj4v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1081904866613:android:7c6de52345bd74c172d87c",
+        "android_client_info": {
+          "package_name": "com.pratama.dany.manager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1081904866613-9k1fti74b8clfktt3f4mmvuui5d8uoj3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pratama.dany.manager",
+            "certificate_hash": "da7517a42ecdf4971a24647ec95f199bf2fa4be1"
+          }
+        },
+        {
+          "client_id": "1081904866613-b2jcd42dffqq4g5hc0950fa1tp0mtj4v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmrXqqBZ2hflQSEiEfDOfzXfKzUywiljs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1081904866613-b2jcd42dffqq4g5hc0950fa1tp0mtj4v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1081904866613:android:c8308751418217e472d87c",
+        "android_client_info": {
+          "package_name": "com.pratama.dany.pelayan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1081904866613-ok8j4tup07hjteq0ufet075hs0i0ftcj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pratama.dany.pelayan",
+            "certificate_hash": "da7517a42ecdf4971a24647ec95f199bf2fa4be1"
+          }
+        },
+        {
+          "client_id": "1081904866613-b2jcd42dffqq4g5hc0950fa1tp0mtj4v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmrXqqBZ2hflQSEiEfDOfzXfKzUywiljs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1081904866613-b2jcd42dffqq4g5hc0950fa1tp0mtj4v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

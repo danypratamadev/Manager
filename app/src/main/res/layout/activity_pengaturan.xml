@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Gray100"
+    tools:context=".PengaturanActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarPesan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/theToolBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/profilCabang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/White"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:paddingStart="25dp"
+                android:paddingEnd="25dp"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless">
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:id="@+id/imgCabang"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:transitionName="photos"
+                    app:civ_border="false"
+                    android:src="@drawable/logo_color"
+                    android:layout_gravity="center_vertical"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="20dp"
+                    android:layout_gravity="center">
+
+                    <TextView android:id="@+id/namaCabangDis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/Gray800"
+                        android:fontFamily="@font/google_sans"/>
+
+                    <TextView android:id="@+id/alamatCabangDis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="14sp"
+                        android:textColor="@color/Gray700"
+                        android:fontFamily="@font/google_sans"
+                        android:layout_marginTop="5dp"/>
+
+                    <TextView android:id="@+id/teleponCabangDis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="14sp"
+                        android:textColor="@color/Gray700"
+                        android:fontFamily="@font/google_sans"
+                        android:layout_marginTop="5dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/White"
+                android:layout_marginTop="@dimen/_15sdp">
+
+                <LinearLayout
+                    android:id="@+id/cardMitra"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_15sdp"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackgroundBorderless">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Potongan Mitra"
+                        android:textSize="@dimen/_13ssp"
+                        android:textColor="@color/Gray800"
+                        android:layout_gravity="center_vertical"/>
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_keyboard_arrow_right_black_24dp"
+                        android:background="@color/White"
+                        android:tint="@color/Gray400"/>
+
+                </LinearLayout>
+
+                <net.cachapa.expandablelayout.ExpandableLayout
+                    android:id="@+id/formMitra"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:el_duration="500"
+                    app:el_expanded="false"
+                    app:el_parallax="0">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/Gray50"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tiPotongGojek"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            app:hintEnabled="true"
+                            android:hint="Potongan Gojek"
+                            app:helperTextEnabled="true"
+                            app:helperText="Example: 20%"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:layout_marginEnd="@dimen/_15sdp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/potongGojek"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_38sdp"
+                                android:textSize="@dimen/_13ssp"
+                                android:textColor="@color/Gray800"
+                                android:inputType="number"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tiPotongGrab"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            app:hintEnabled="true"
+                            android:hint="Potongan Grab"
+                            app:helperTextEnabled="true"
+                            app:helperText="Example: 20%"
+                            android:layout_margin="@dimen/_15sdp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/potongGrab"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_38sdp"
+                                android:textSize="@dimen/_13ssp"
+                                android:textColor="@color/Gray800"
+                                android:inputType="number"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                </net.cachapa.expandablelayout.ExpandableLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/editProfileCabang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_mode_edit_black_24dp"
+        android:tint="@color/White"
+        app:backgroundTint="@color/RedPrimary"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/_15sdp"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

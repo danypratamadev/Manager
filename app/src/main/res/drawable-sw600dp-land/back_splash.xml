@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@color/RedPrimaryDark"/>
+
+    <item android:width="@dimen/_55sdp"
+        android:height="@dimen/_45sdp"
+        android:gravity="center">
+
+        <bitmap android:src="@drawable/logo_yellow" android:alpha="0.8"/>
+
+    </item>
+
+</layer-list>

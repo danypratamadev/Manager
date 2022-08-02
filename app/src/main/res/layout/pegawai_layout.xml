@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/Gray50"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:foreground="?attr/selectableItemBackgroundBorderless">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            app:cardCornerRadius="@dimen/_7sdp"
+            app:cardElevation="@dimen/_1sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_15sdp">
+
+            <ImageView
+                android:id="@+id/imgPgw"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/logo_color"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center_vertical"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/namaPgw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nasi Goreng Udang"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold"
+                android:textColor="@color/Gray800"
+                android:fontFamily="@font/sans_ui"/>
+
+            <TextView
+                android:id="@+id/profPgw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tersedia"
+                android:textSize="@dimen/_9sdp"
+                android:textColor="@color/Gray700"
+                android:fontFamily="@font/sans_ui"
+                android:layout_marginTop="@dimen/_2sdp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/Gray200"
+        android:layout_marginStart="@dimen/_75sdp"/>
+
+</LinearLayout>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Gray100"
+    tools:context=".MenuActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarPesan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/theToolBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabKelolaMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabIndicatorAnimationDuration="5"
+            app:tabIndicatorColor="@color/YellowKuahPanas"
+            app:tabIndicatorGravity="bottom"
+            app:tabIndicatorHeight="@dimen/_2sdp"
+            app:tabSelectedTextColor="@color/YellowKuahPanas"
+            app:tabTextColor="@color/White70T"
+            android:layout_gravity="center_horizontal"
+            app:tabMode="scrollable"
+            app:tabTextAppearance="@style/TabItemStyle"
+            android:background="@color/RedPrimary">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sop"/>
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Soto"/>
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Coto"/>
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rawon"/>
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sup"/>
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mie"/>
+
+        </com.google.android.material.tabs.TabLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/mainView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/menu_shimmer"/>
+                <include layout="@layout/menu_shimmer"/>
+                <include layout="@layout/menu_shimmer"/>
+                <include layout="@layout/menu_shimmer"/>
+                <include layout="@layout/menu_shimmer"/>
+                <include layout="@layout/menu_shimmer"/>
+                <include layout="@layout/menu_shimmer"/>
+
+            </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/menuViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/tambahMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add_black_24dp"
+        android:tint="@color/White"
+        app:backgroundTint="@color/RedPrimary"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/_15sdp"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

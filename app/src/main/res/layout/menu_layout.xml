@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/Gray50"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:foreground="?attr/selectableItemBackgroundBorderless">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_11sdp"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_marginBottom="@dimen/_10sdp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                app:cardCornerRadius="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_marginTop="@dimen/_9sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_3sdp">
+
+                <ImageView
+                    android:id="@+id/imgMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/logo_color"
+                    android:padding="@dimen/_5sdp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmerPromo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/_2sdp"
+                app:shimmer_base_alpha="0.8"
+                app:shimmer_duration="3000"
+                app:shimmer_auto_start="false"
+                android:visibility="invisible">
+
+                <ImageView
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/cardpromo"
+                    android:scaleType="fitXY"/>
+
+                <TextView
+                    android:id="@+id/promoMenu"
+                    android:layout_width="@dimen/_47sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:text="PROMO"
+                    android:textSize="@dimen/_9sdp"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:textColor="@color/Gray100"
+                    android:fontFamily="@font/titillium_regular"
+                    android:gravity="center"/>
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/namaMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nasi Goreng Udang"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold"
+                android:textColor="@color/Gray800"
+                android:fontFamily="@font/sans_ui"/>
+
+            <TextView
+                android:id="@+id/statusMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tersedia"
+                android:textSize="@dimen/_9sdp"
+                android:textColor="@color/Gray700"
+                android:fontFamily="@font/sans_ui"/>
+
+            <TextView
+                android:id="@+id/hargaMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Rp.35.000"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="bold"
+                android:textColor="@color/Gray800"
+                android:layout_marginTop="@dimen/_5sdp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/Gray200"
+        android:layout_marginStart="@dimen/_80sdp"/>
+
+</LinearLayout>

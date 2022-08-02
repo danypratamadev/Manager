@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White"
+    tools:context=".HomeActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/theToolBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_10sdp"
+                    android:background="@drawable/back_gradient">
+
+                    <TextView
+                        android:id="@+id/namaCabangDis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dany Pratama"
+                        android:textSize="@dimen/_16ssp"
+                        android:textColor="@color/Gray50"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_20sdp"/>
+
+                    <TextView
+                        android:id="@+id/alamatCabangDis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kasir"
+                        android:textSize="@dimen/_10ssp"
+                        android:textColor="@color/Gray200"
+                        android:fontFamily="@font/sans_ui"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"/>
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardDash"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="@dimen/_7sdp"
+                    android:layout_marginTop="@dimen/_75sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_15sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_15sdp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Overview"
+                            android:textSize="@dimen/_12ssp"
+                            android:textStyle="bold"
+                            android:textColor="@color/Gray800"
+                            android:layout_marginBottom="@dimen/_10sdp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:background="@drawable/back_dash">
+
+                            <LinearLayout
+                                android:id="@+id/cardTransaksi"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:paddingTop="@dimen/_10sdp"
+                                android:paddingBottom="@dimen/_10sdp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Transaksi"
+                                    android:textSize="@dimen/_10ssp"
+                                    android:textColor="@color/Gray700"
+                                    android:fontFamily="@font/sans_ui"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginBottom="@dimen/_7sdp"/>
+
+                                <TextView
+                                    android:id="@+id/jmlTrans"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:textSize="@dimen/_14ssp"
+                                    android:textColor="@color/Gray800"
+                                    android:layout_gravity="center_horizontal" />
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="@dimen/_1sdp"
+                                android:layout_height="match_parent"
+                                android:background="@color/Gray200"
+                                android:layout_marginTop="@dimen/_15sdp"
+                                android:layout_marginBottom="@dimen/_15sdp"/>
+
+                            <LinearLayout
+                                android:id="@+id/cardItem"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:paddingTop="@dimen/_10sdp"
+                                android:paddingBottom="@dimen/_10sdp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Item"
+                                    android:textSize="@dimen/_10ssp"
+                                    android:textColor="@color/Gray700"
+                                    android:fontFamily="@font/sans_ui"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginBottom="@dimen/_7sdp"/>
+
+                                <TextView
+                                    android:id="@+id/jmlItem"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="0"
+                                    android:textSize="@dimen/_14ssp"
+                                    android:textColor="@color/Gray800"
+                                    android:layout_gravity="center_horizontal" />
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="@dimen/_1sdp"
+                                android:layout_height="match_parent"
+                                android:background="@color/Gray200"
+                                android:layout_marginTop="@dimen/_15sdp"
+                                android:layout_marginBottom="@dimen/_15sdp"/>
+
+                            <LinearLayout
+                                android:id="@+id/cardPendapatan"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:paddingTop="@dimen/_10sdp"
+                                android:paddingBottom="@dimen/_10sdp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Pendapatan"
+                                    android:textSize="@dimen/_10ssp"
+                                    android:textColor="@color/Gray700"
+                                    android:fontFamily="@font/sans_ui"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginBottom="@dimen/_7sdp"/>
+
+                                <TextView
+                                    android:id="@+id/jmlPendapatan"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Rp0"
+                                    android:textSize="@dimen/_14ssp"
+                                    android:textColor="@color/Gray800"
+                                    android:layout_gravity="center_horizontal" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/cap1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cardDash"
+                    android:layout_weight="1"
+                    android:text="Mulai disini"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold"
+                    android:textColor="@color/Gray800"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"/>
+
+                <LinearLayout
+                    android:id="@+id/group1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_below="@id/cap1"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_5sdp">
+
+                    <LinearLayout
+                        android:id="@+id/kelolaMenu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_10sdp"
+                        android:background="@drawable/back_dash"
+                        android:backgroundTint="@color/Red100"
+                        android:layout_marginEnd="@dimen/_5sdp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_shopping_basket_black_24dp"
+                            android:tint="@color/Red300"
+                            android:layout_marginBottom="@dimen/_7sdp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Kelola Menu"
+                            android:textSize="@dimen/_11ssp"
+                            android:textColor="@color/Gray800"
+                            android:fontFamily="@font/sans_ui"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/kelolaPegawai"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_10sdp"
+                        android:background="@drawable/back_dash"
+                        android:backgroundTint="@color/Brown100"
+                        android:layout_marginStart="@dimen/_5sdp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_person_black_24dp"
+                            android:tint="@color/Brown300"
+                            android:layout_marginBottom="@dimen/_7sdp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Kelola Pegawai"
+                            android:textSize="@dimen/_11ssp"
+                            android:textColor="@color/Gray800"
+                            android:fontFamily="@font/sans_ui"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/group2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_below="@id/group1"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_15sdp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_10sdp"
+                        android:background="@drawable/back_dash"
+                        android:backgroundTint="@color/Green100"
+                        android:layout_marginEnd="@dimen/_5sdp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_favorite_black_24dp"
+                            android:tint="@color/Green300"
+                            android:layout_marginBottom="@dimen/_7sdp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Kelola Promo"
+                            android:textSize="@dimen/_11ssp"
+                            android:textColor="@color/Gray800"
+                            android:fontFamily="@font/sans_ui"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_10sdp"
+                        android:background="@drawable/back_dash"
+                        android:backgroundTint="@color/Orange100"
+                        android:layout_marginStart="@dimen/_5sdp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_shopping_cart_black_24dp"
+                            android:tint="@color/Orange300"
+                            android:layout_marginBottom="@dimen/_7sdp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Kelola Gudang"
+                            android:textSize="@dimen/_11ssp"
+                            android:textColor="@color/Gray800"
+                            android:fontFamily="@font/sans_ui"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tglSekarang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/group2"
+                    android:layout_weight="1"
+                    android:text="Today, 18 Desember 2019"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold"
+                    android:textColor="@color/Gray700"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"/>
+
+                <LinearLayout
+                    android:id="@+id/emptyTrans"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tglSekarang"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/_50sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_65sdp"
+                        android:layout_height="@dimen/_65sdp"
+                        android:src="@drawable/emptytrans"
+                        android:tint="@color/Gray500"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/back_round"
+                        android:backgroundTint="@color/Gray50"
+                        android:padding="@dimen/_7sdp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Belum ada transaksi hari ini."
+                        android:textSize="@dimen/_10ssp"
+                        android:textColor="@color/Gray700"
+                        android:fontFamily="@font/sans_ui"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/_7sdp"/>
+
+                </LinearLayout>
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/shimmerTransaksi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tglSekarang"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <include layout="@layout/transaksi_shimmer"/>
+                        <include layout="@layout/transaksi_shimmer"/>
+                        <include layout="@layout/transaksi_shimmer"/>
+                        <include layout="@layout/transaksi_shimmer"/>
+                        <include layout="@layout/transaksi_shimmer"/>
+                        <include layout="@layout/transaksi_shimmer"/>
+
+                    </LinearLayout>
+
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvTransaksi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tglSekarang"/>
+
+                <TextView
+                    android:id="@+id/versiAppDis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rvTransaksi"
+                    android:text="Versi 1.0"
+                    android:fontFamily="@font/sans_ui"
+                    android:textAlignment="center"
+                    android:textColor="@color/Gray500"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:layout_marginBottom="@dimen/_90sdp"/>
+
+            </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

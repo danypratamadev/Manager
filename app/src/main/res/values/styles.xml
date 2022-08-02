@@ -1,0 +1,75 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/RedPrimary</item>
+        <item name="colorPrimaryDark">@color/RedPrimaryDark</item>
+        <item name="colorAccent">@color/RedPrimary</item>
+        <item name="android:fontFamily">@font/google_sans</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/RedPrimary</item>
+        <item name="colorPrimaryDark">@color/RedPrimaryDark</item>
+        <item name="colorAccent">@color/RedPrimary</item>
+        <item name="android:windowBackground">@drawable/back_splash</item>
+    </style>
+
+    <style name="BayarTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/RedPrimary</item>
+        <item name="colorPrimaryDark">@color/RedPrimaryDark</item>
+        <item name="colorAccent">@color/RedPrimary</item>
+        <item name="android:fontFamily">@font/google_sans</item>
+        <item name="android:dropDownListViewStyle">@style/SpinnerStyle</item>
+    </style>
+
+    <style name="DoneTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/White</item>
+        <item name="colorPrimaryDark">@color/White</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="android:fontFamily">@font/google_sans</item>
+        <item name="android:dropDownListViewStyle">@style/SpinnerStyle</item>
+    </style>
+
+    <style name="TabItemStyle" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
+        <item name="android:fontFamily">@font/google_sans</item>
+        <item name="android:textSize">@dimen/_13ssp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TabItemStyleTablet" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
+        <item name="android:fontFamily">@font/google_sans</item>
+        <item name="android:textSize">@dimen/_9ssp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/fade_in</item>
+        <item name="android:windowExitAnimation">@anim/fade_out</item>
+    </style>
+
+    <style name="SpinnerStyle" parent="Widget.AppCompat.ListView.DropDown">
+        <item name="android:divider">@color/Gray200</item>
+        <item name="android:dividerHeight">0.5dp</item>
+        <item name="android:textColor">@color/Gray800</item>
+    </style>
+
+    <style name="spinner_style">
+        <item name="android:showDividers">none</item>
+        <item name="android:dividerHeight">0dp</item>
+        <item name="android:scrollbarAlwaysDrawVerticalTrack">true</item>
+        <item name="android:dropDownSelector">@android:color/white</item>
+        <item name="android:textColor">@color/Gray800</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+    </style>
+
+    <style name="spinner_style_tablet">
+        <item name="android:showDividers">none</item>
+        <item name="android:dividerHeight">0dp</item>
+        <item name="android:scrollbarAlwaysDrawVerticalTrack">true</item>
+        <item name="android:dropDownSelector">@android:color/white</item>
+        <item name="android:textColor">@color/Gray800</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+    </style>
+
+</resources>

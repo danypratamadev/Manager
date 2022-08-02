@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/cardTransaksi"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/White"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/_10sdp"
+    android:paddingBottom="@dimen/_10sdp"
+    android:paddingStart="@dimen/_15sdp"
+    android:paddingEnd="@dimen/_15sdp"
+    android:clickable="true"
+    android:foreground="?attr/selectableItemBackgroundBorderless">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_receipt_black_18dp"
+        android:tint="@color/Blue400"
+        android:background="@drawable/back_round"
+        android:backgroundTint="@color/Blue50"
+        android:padding="@dimen/_7sdp"
+        android:layout_gravity="center_vertical"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/nomorTrans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nomor order"
+            android:textSize="@dimen/_9sdp"
+            android:textColor="@color/Gray700"
+            android:fontFamily="@font/sans_ui"/>
+
+        <TextView
+            android:id="@+id/plgTrans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welly Oktavianus"
+            android:textSize="@dimen/_10sdp"
+            android:textStyle="bold"
+            android:textColor="@color/Gray700"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/jamTrans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="08:10"
+            android:textSize="@dimen/_9sdp"
+            android:textColor="@color/Gray700"
+            android:fontFamily="@font/sans_ui"
+            android:layout_gravity="end"/>
+
+        <TextView
+            android:id="@+id/totalTrans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rp105.000"
+            android:textSize="@dimen/_10sdp"
+            android:textStyle="bold"
+            android:textColor="@color/Gray700"
+            android:layout_gravity="end"
+            android:visibility="invisible"/>
+
+    </LinearLayout>
+
+</LinearLayout>

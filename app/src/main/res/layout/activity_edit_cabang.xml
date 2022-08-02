@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Gray100"
+    tools:context=".EditCabangActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarPesan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/theToolBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tiNamaCabang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                app:hintEnabled="true"
+                android:hint="Nama Cabang"
+                app:helperTextEnabled="true"
+                app:helperText="*required"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/namaCabangDis"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_38sdp"
+                    android:textSize="@dimen/_13ssp"
+                    android:textColor="@color/Gray800"
+                    android:inputType="text"
+                    android:maxLength="100"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tiTeleponCabang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                app:hintEnabled="true"
+                android:hint="Telepon Cabang"
+                app:helperTextEnabled="true"
+                app:helperText="*required"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/teleponCabangDis"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_38sdp"
+                    android:textSize="@dimen/_13ssp"
+                    android:textColor="@color/Gray800"
+                    android:inputType="number"
+                    android:maxLength="13"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tiAlamatCabang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                app:hintEnabled="true"
+                android:hint="Alamat Cabang"
+                app:helperTextEnabled="true"
+                app:helperText="*required"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/alamatCabangDis"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_75sdp"
+                    android:textSize="@dimen/_13ssp"
+                    android:textColor="@color/Gray800"
+                    android:inputType="text"
+                    android:gravity="start|left"
+                    android:maxLength="150"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/Gray300"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_15sdp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tiPotongGojek"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                app:hintEnabled="true"
+                android:hint="Potongan Mitra Gojek"
+                app:helperTextEnabled="true"
+                app:helperText="Example: 20%"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/potongGojek"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_38sdp"
+                    android:textSize="@dimen/_13ssp"
+                    android:textColor="@color/Gray800"
+                    android:inputType="number"
+                    android:maxLength="3"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tiPotongGrab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                app:hintEnabled="true"
+                android:hint="Potongan Mitra Grab"
+                app:helperTextEnabled="true"
+                app:helperText="Example: 20%"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_15sdp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/potongGrab"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_38sdp"
+                    android:textSize="@dimen/_13ssp"
+                    android:textColor="@color/Gray800"
+                    android:inputType="number"
+                    android:maxLength="3"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="bottom"
+        android:background="@color/White"
+        android:elevation="@dimen/_5sdp">
+
+        <Button
+            android:id="@+id/simpanProfilCabang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Simpan"
+            android:textSize="@dimen/_13ssp"
+            android:textAllCaps="false"
+            android:textColor="@color/White"
+            android:background="@drawable/back_button"
+            android:stateListAnimator="@null"
+            android:layout_margin="@dimen/_10sdp"/>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

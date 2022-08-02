@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/_250sdp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/back_alert_round"
+    android:layout_gravity="center">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Peringatan"
+        android:textColor="@color/RedPrimary"
+        android:textSize="@dimen/_16ssp"
+        android:textStyle="bold"
+        android:textAlignment="textStart"
+        android:layout_marginStart="@dimen/_17sdp"
+        android:layout_marginEnd="@dimen/_17sdp"
+        android:layout_marginTop="@dimen/_17sdp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sans_ui"
+        android:text="Data belum tersimpan! Apakah anda ingin menyimpan perubahan data ini?"
+        android:textColor="@color/Gray700"
+        android:textSize="@dimen/_12ssp"
+        android:textAlignment="textStart"
+        android:layout_marginStart="@dimen/_17sdp"
+        android:layout_marginEnd="@dimen/_17sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_20sdp"/>
+
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/Gray300"
+                    android:layout_marginTop="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+                android:id="@+id/no"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_weight="1"
+                android:background="@color/White100T"
+                android:textColor="@color/Gray600"
+                android:text="Tidak"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless"/>
+
+        <RelativeLayout android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/Gray300"/>
+
+        <Button
+            android:id="@+id/yes"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_weight="1"
+            android:background="@color/White100T"
+            android:textColor="@color/RedPrimary"
+            android:text="Simpan"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackgroundBorderless"/>
+
+    </LinearLayout>
+
+</LinearLayout>
